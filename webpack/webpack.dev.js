@@ -10,6 +10,9 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.name':JSON.stringify('dev')
     }),
-    new ReactRefreshWebpackPlugin()
+    new ReactRefreshWebpackPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.REMOTE_URL': JSON.stringify('http://localhost:8082')
+    }),
   ]
 }

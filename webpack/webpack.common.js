@@ -3,6 +3,8 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const deps = require("../package.json").dependencies;
+const remoteUrl = process.env.REMOTE_URL || 'http://localhost:8082'; // 默认值为 localhost
+
 
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),  //项目入口
@@ -50,7 +52,7 @@ module.exports = {
       name: "host",
       filename: "remoteEntry.js",
       remotes: {
-        'remote-mf': 'remote@http://localhost:8082/remoteEntry.js',
+        'remote-mf': `remote@${remoteUrl}/remoteEntry.js`,
       },
       exposes: {},
       shared: {
