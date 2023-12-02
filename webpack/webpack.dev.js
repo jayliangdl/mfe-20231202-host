@@ -1,10 +1,6 @@
 const webpack = require('webpack');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-console.log('dev is loaded');
-console.log('dev is loaded');
-console.log('dev is loaded');
-console.log('dev is loaded');
-console.log('dev is loaded');
+
 module.exports = {
   webpackConfig:{
     mode: 'development',

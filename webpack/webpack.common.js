@@ -3,17 +3,10 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const deps = require("../package.json").dependencies;
-// const remoteUrl = process.env.REMOTE_URL || 'http://localhost:8082'; // 默认值为 localhost
-// console.log('remoteUrl:'+remoteUrl);
-// console.log('remoteUrl:'+remoteUrl);
 
 module.exports = (env) => {
   const consumURL = env['appConfig']['consumURL']; 
-  console.log('consumURL:'+`remote@${consumURL}/remoteEntry.js`);
-  console.log('consumURL:'+`remote@${consumURL}/remoteEntry.js`);
-  console.log('consumURL:'+`remote@${consumURL}/remoteEntry.js`);
-  console.log('consumURL:'+`remote@${consumURL}/remoteEntry.js`);
-  console.log('consumURL:'+`remote@${consumURL}/remoteEntry.js`);
+
   return {
       entry: path.resolve(__dirname, '..', './src/index.tsx'),  //项目入口
       resolve: {
