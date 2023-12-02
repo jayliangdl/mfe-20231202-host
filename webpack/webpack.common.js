@@ -9,6 +9,11 @@ const deps = require("../package.json").dependencies;
 
 module.exports = (env) => {
   const consumURL = env['appConfig']['consumURL']; 
+  console.log('consumURL:'+`remote@${consumURL}/remoteEntry.js`);
+  console.log('consumURL:'+`remote@${consumURL}/remoteEntry.js`);
+  console.log('consumURL:'+`remote@${consumURL}/remoteEntry.js`);
+  console.log('consumURL:'+`remote@${consumURL}/remoteEntry.js`);
+  console.log('consumURL:'+`remote@${consumURL}/remoteEntry.js`);
   return {
       entry: path.resolve(__dirname, '..', './src/index.tsx'),  //项目入口
       resolve: {
