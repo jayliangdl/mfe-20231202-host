@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 module.exports = {
+  /**webpack专属的配置放在这里*/
   webpackConfig:{
     mode: 'production',
     
@@ -10,6 +11,7 @@ module.exports = {
       })
     ]
   },
+  /**应用自己的配置放在这里*/
   appConfig:{
     consumURL:'https://mfe-20231202-remote.vercel.app',
   }
